@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
@@ -9,14 +8,14 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     // Handle form submission here
     setFormData({ name: '', email: '', message: '' });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -24,14 +23,26 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100">
-      <div className="container mx-auto px-6">
+    <section 
+      id="contact" 
+      className="py-20 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-100 relative"
+      style={{
+        backgroundImage: 'url(/lovable-uploads/d70ea757-6891-4c59-98ce-522224322a69.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/80 via-blue-900/70 to-indigo-900/80"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Ready to start your next project? Let's work together to create something amazing!
           </p>
         </div>
@@ -40,8 +51,8 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-gray-800">Let's Connect</h3>
-              <p className="text-gray-600 mb-8">
+              <h3 className="text-2xl font-bold mb-6 text-white">Let's Connect</h3>
+              <p className="text-gray-200 mb-8">
                 I'm always interested in hearing about new projects and opportunities. 
                 Whether you're a company looking to hire, or you're someone looking to 
                 collaborate, I'd love to hear from you.
@@ -50,51 +61,40 @@ const Contact = () => {
 
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                  <Mail className="w-6 h-6 text-purple-600" />
+                <div className="w-12 h-12 bg-purple-600/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Mail className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Email</h4>
-                  <p className="text-gray-600">nick.paemasau@example.com</p>
+                  <h4 className="font-semibold text-white">Email</h4>
+                  <p className="text-gray-200">nickparmasau@gmail.com</p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                  <Phone className="w-6 h-6 text-blue-600" />
+                <div className="w-12 h-12 bg-blue-600/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <Phone className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Phone</h4>
-                  <p className="text-gray-600">+1 (555) 123-4567</p>
+                  <h4 className="font-semibold text-white">Phone</h4>
+                  <p className="text-gray-200">+254 706709332</p>
                 </div>
               </div>
 
               <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                  <MapPin className="w-6 h-6 text-green-600" />
+                <div className="w-12 h-12 bg-green-600/80 backdrop-blur-sm rounded-full flex items-center justify-center">
+                  <MapPin className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Location</h4>
-                  <p className="text-gray-600">Available Worldwide</p>
+                  <h4 className="font-semibold text-white">Location</h4>
+                  <p className="text-gray-200">Available Worldwide</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Professional Photo */}
-            <div className="mt-8">
-              <div className="rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="/lovable-uploads/d70ea757-6891-4c59-98ce-522224322a69.png" 
-                  alt="Nick Paemasau"
-                  className="w-full h-64 object-cover"
-                />
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 shadow-lg">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="bg-white/95 backdrop-blur-sm rounded-xl p-8 shadow-2xl">
+            <div className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                   Name *
@@ -145,12 +145,13 @@ const Contact = () => {
 
               <button
                 type="submit"
+                onClick={handleSubmit}
                 className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Send Message</span>
               </button>
-            </form>
+            </div>
           </div>
         </div>
       </div>

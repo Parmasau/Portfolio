@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
@@ -9,32 +8,36 @@ const Projects = () => {
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/yourusername/ecommerce-platform",
+      live: "#", // Coming soon
+      hasDemo: false
     },
     {
       title: "Task Management App",
       description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/yourusername/task-management-app",
+      live: "#", // Coming soon
+      hasDemo: false
     },
     {
       title: "Weather Dashboard",
       description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
       image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["React", "OpenWeather API", "Chart.js", "Tailwind"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/yourusername/weather-dashboard",
+      live: "#", // Coming soon
+      hasDemo: false
     },
     {
       title: "Social Media Analytics",
       description: "A comprehensive analytics dashboard for social media metrics with data visualization and automated reporting features.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["Next.js", "Python", "D3.js", "AWS"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/yourusername/social-media-analytics",
+      live: "#", // Coming soon
+      hasDemo: false
     }
   ];
 
@@ -55,8 +58,14 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 group"
+              className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] group relative"
             >
+              {!project.hasDemo && (
+                <div className="absolute top-4 left-4 bg-yellow-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
+                  Coming Soon
+                </div>
+              )}
+              
               <div className="relative overflow-hidden">
                 <img 
                   src={project.image} 
@@ -67,16 +76,32 @@ const Projects = () => {
                 <div className="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a 
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors duration-200"
+                    aria-label={`View ${project.title} code on GitHub`}
                   >
                     <Github className="w-4 h-4 text-gray-700" />
                   </a>
-                  <a 
-                    href={project.live}
-                    className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors duration-200"
-                  >
-                    <ExternalLink className="w-4 h-4 text-gray-700" />
-                  </a>
+                  {project.hasDemo ? (
+                    <a 
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 bg-white/90 rounded-full hover:bg-white transition-colors duration-200"
+                      aria-label={`View ${project.title} live demo`}
+                    >
+                      <ExternalLink className="w-4 h-4 text-gray-700" />
+                    </a>
+                  ) : (
+                    <button 
+                      className="p-2 bg-white/90 rounded-full cursor-not-allowed"
+                      disabled
+                      aria-label="Demo coming soon"
+                    >
+                      <ExternalLink className="w-4 h-4 text-gray-400" />
+                    </button>
+                  )}
                 </div>
               </div>
               
@@ -98,18 +123,29 @@ const Projects = () => {
                 <div className="flex space-x-4">
                   <a 
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-2 text-gray-600 hover:text-purple-600 transition-colors duration-200"
                   >
                     <Github className="w-4 h-4" />
                     <span>Code</span>
                   </a>
-                  <a 
-                    href={project.live}
-                    className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Live Demo</span>
-                  </a>
+                  {project.hasDemo ? (
+                    <a 
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Live Demo</span>
+                    </a>
+                  ) : (
+                    <span className="flex items-center space-x-2 text-gray-400">
+                      <ExternalLink className="w-4 h-4" />
+                      <span>Coming Soon</span>
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
