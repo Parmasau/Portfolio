@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
-              Portfolio
+              Nick Paemasau
             </div>
             <p className="text-gray-400 mb-6">
               Crafting digital experiences with passion, precision, and purpose.
@@ -54,9 +54,9 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-2 text-gray-400">
-              <p>alex@example.com</p>
+              <p>nick.paemasau@example.com</p>
               <p>+1 (555) 123-4567</p>
-              <p>San Francisco, CA</p>
+              <p>Available Worldwide</p>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ const Footer = () => {
           <p className="text-gray-400 flex items-center justify-center space-x-2">
             <span>Made with</span>
             <Heart className="w-4 h-4 text-red-500 fill-current animate-pulse" />
-            <span>by Alex Johnson</span>
+            <span>by Nick Paemasau</span>
           </p>
           <p className="text-gray-500 text-sm mt-2">
             © 2024 All rights reserved.

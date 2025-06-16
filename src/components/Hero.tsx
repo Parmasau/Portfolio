@@ -20,11 +20,22 @@ const Hero = () => {
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 animate-scale-in">
+            <div className="w-48 h-48 mx-auto rounded-full overflow-hidden shadow-2xl ring-4 ring-white/50 transform hover:scale-105 transition-transform duration-300">
+              <img 
+                src="/lovable-uploads/92e3217e-9613-40a1-95a0-2630d75bbc09.png" 
+                alt="Nick Paemasau"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent animate-scale-in">
-            Hi, I'm <span className="animate-pulse">Alex</span>
+            Hi, I'm <span className="animate-pulse">Nick</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-fade-in delay-300">
-            Full Stack Developer & Creative Problem Solver
+            Designer & Developer | Creative Problem Solver
           </p>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto animate-fade-in delay-500">
             I craft beautiful, functional web experiences that bring ideas to life. 

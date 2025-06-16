@@ -34,18 +34,37 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of experience crafting 
-              digital experiences that make a difference. My journey began with a curiosity 
-              about how websites work, and it has evolved into a deep love for creating 
-              innovative solutions.
+              I'm Nick Paemasau, a passionate designer and developer with a love for creating 
+              digital experiences that make a difference. My journey began with curiosity 
+              about design and technology, which has evolved into expertise in both creative 
+              and technical domains.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              When I'm not coding, you'll find me exploring new technologies, contributing 
-              to open source projects, or sharing knowledge with the developer community. 
-              I believe in continuous learning and staying at the forefront of web development.
+              When I'm not designing or coding, you'll find me exploring new technologies, 
+              participating in tech events, or sharing knowledge with the developer community. 
+              I believe in continuous learning and staying at the forefront of design and development.
             </p>
+            
+            {/* Photo Grid */}
+            <div className="grid grid-cols-2 gap-4 pt-4">
+              <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/lovable-uploads/1591d6ca-7199-4d03-b904-a9c4cc5951bd.png" 
+                  alt="Nick at tech conference"
+                  className="w-full h-32 object-cover"
+                />
+              </div>
+              <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <img 
+                  src="/lovable-uploads/c8d9a196-a439-42ae-b0d8-983b15749a3b.png" 
+                  alt="Nick speaking"
+                  className="w-full h-32 object-cover"
+                />
+              </div>
+            </div>
+            
             <div className="flex flex-wrap gap-4 pt-4">
-              {['React', 'TypeScript', 'Node.js', 'Python', 'AWS', 'MongoDB'].map((tech) => (
+              {['React', 'TypeScript', 'Node.js', 'Python', 'Figma', 'UI/UX'].map((tech) => (
                 <span key={tech} className="px-4 py-2 bg-gray-100 rounded-full text-gray-700 hover:bg-purple-100 hover:text-purple-700 transition-colors duration-300">
                   {tech}
                 </span>

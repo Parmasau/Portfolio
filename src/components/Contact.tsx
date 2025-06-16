@@ -55,7 +55,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Email</h4>
-                  <p className="text-gray-600">alex@example.com</p>
+                  <p className="text-gray-600">nick.paemasau@example.com</p>
                 </div>
               </div>
 
@@ -75,8 +75,19 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Location</h4>
-                  <p className="text-gray-600">San Francisco, CA</p>
+                  <p className="text-gray-600">Available Worldwide</p>
                 </div>
+              </div>
+            </div>
+
+            {/* Professional Photo */}
+            <div className="mt-8">
+              <div className="rounded-lg overflow-hidden shadow-lg">
+                <img 
+                  src="/lovable-uploads/d70ea757-6891-4c59-98ce-522224322a69.png" 
+                  alt="Nick Paemasau"
+                  className="w-full h-64 object-cover"
+                />
               </div>
             </div>
           </div>
