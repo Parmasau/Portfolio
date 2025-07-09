@@ -8,36 +8,37 @@ const Projects = () => {
       description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and order processing.",
       image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["React", "Node.js", "MongoDB", "Stripe"],
-      github: "https://github.com/yourusername/ecommerce-platform",
-      live: "#", // Coming soon
-      hasDemo: false
+      github: "https://github.com/Parmasau/E-commerce.git",
+      live: "https://e-commerce-q5qacj9me-nick-parmasaus-projects.vercel.app",
+      hasDemo: true
     },
     {
       title: "Task Management App",
       description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["React", "TypeScript", "Socket.io", "PostgreSQL"],
-      github: "https://github.com/yourusername/task-management-app",
-      live: "#", // Coming soon
-      hasDemo: false
+      github: "https://github.com/Parmasau/organize-spark-plan.git",
+      live: "https://organize-spark-plan-ae7qbi909-nick-parmasaus-projects.vercel.app",
+      hasDemo: true
     },
-    {
-      title: "Weather Dashboard",
-      description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
-      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      tech: ["React", "OpenWeather API", "Chart.js", "Tailwind"],
-      github: "https://github.com/yourusername/weather-dashboard",
-      live: "#", // Coming soon
-      hasDemo: false
-    },
+     {
+  title: "Weather Dashboard",
+  description: "A beautiful weather application with location-based forecasts, interactive maps, and detailed weather analytics.",
+  image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+  tech: ["React", "OpenWeather API", "Chart.js", "Tailwind"],
+  github: "https://github.com/Parmasau/forecast-buddy-weather-now.git",
+  live: "https://weather-git-main-nick-parmasaus-projects.vercel.app",
+  hasDemo: true
+},
+
     {
       title: "Social Media Analytics",
       description: "A comprehensive analytics dashboard for social media metrics with data visualization and automated reporting features.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       tech: ["Next.js", "Python", "D3.js", "AWS"],
-      github: "https://github.com/yourusername/social-media-analytics",
-      live: "#", // Coming soon
-      hasDemo: false
+      github: "https://github.com/Parmasau/analytic-social-eye.git",
+     live: "https://s0cial-media-analytics.vercel.app/",
+      hasDemo: true
     }
   ];
 

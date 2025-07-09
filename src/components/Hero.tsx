@@ -63,7 +63,7 @@ const Hero = () => {
               <Github className="w-6 h-6 text-white" />
             </a>
             <a 
-              href="https://linkedin.com/in/yourusername" 
+              href="https://linkedin.com/in/ParmasauNchoe" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-white/20 backdrop-blur-md rounded-full shadow-2xl hover:shadow-3xl hover:bg-white/30 transform hover:scale-110 transition-all duration-300 border border-white/20"
@@ -88,7 +88,7 @@ const Hero = () => {
               <Instagram className="w-6 h-6 text-pink-300" />
             </a>
             <a 
-              href="https://twitter.com/yourusername" 
+              href="https://twitter.com/ParmasauN" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 bg-white/20 backdrop-blur-md rounded-full shadow-2xl hover:shadow-3xl hover:bg-white/30 transform hover:scale-110 transition-all duration-300 border border-white/20"
@@ -97,7 +97,7 @@ const Hero = () => {
               <Twitter className="w-6 h-6 text-sky-300" />
             </a>
             <a 
-              href="tel:+1234567890" 
+              href="tel:+254706709332" 
               className="p-3 bg-white/20 backdrop-blur-md rounded-full shadow-2xl hover:shadow-3xl hover:bg-white/30 transform hover:scale-110 transition-all duration-300 border border-white/20"
               aria-label="Phone"
             >

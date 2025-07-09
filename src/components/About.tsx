@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Code, Palette, Zap } from 'lucide-react';
 
@@ -34,7 +33,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 leading-relaxed">
-              I'm Nick Paemasau, a passionate designer and developer with a love for creating 
+              I'm Nick Parmasau, a passionate designer and developer with a love for creating 
               digital experiences that make a difference. My journey began with curiosity 
               about design and technology, which has evolved into expertise in both creative 
               and technical domains.
@@ -49,7 +48,7 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
                 <img 
-                  src="/lovable-uploads/1591d6ca-7199-4d03-b904-a9c4cc5951bd.png" 
+                  src="/lovable-uploads/3b1c8f0e-2d4a-4b5c-9f6d-7f8e1c2d3e4f.png" 
                   alt="Nick at tech conference"
                   className="w-full h-32 object-cover"
                 />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, Heart, Instagram, MessageCircle } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Instagram, Twitter, Phone, Facebook } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -15,24 +15,63 @@ const Footer = () => {
               Crafting digital experiences with passion, precision, and purpose.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+              <a 
+                href="https://github.com/parmasau"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                aria-label="GitHub"
+              >
                 <Github className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors duration-300">
+              <a 
+                href="https://linkedin.com/in/ParmasauNchoe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors duration-300">
+              <a 
+                href="https://instagram.com/parmasaunick" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-300 transition-colors duration-300">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
+              <a 
+                href="https://twitter.com/ParmasauN" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-300 transition-colors duration-300"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-300">
-                <MessageCircle className="w-6 h-6" />
+              <a 
+                href="tel:+254706709332" 
+                className="text-gray-400 hover:text-green-400 transition-colors duration-300"
+                aria-label="Phone"
+              >
+                <Phone className="w-6 h-6" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-red-400 transition-colors duration-300">
+              <a 
+                href="https://facebook.com/nickparmasau" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a 
+                href="mailto:nickparmasau@gmail.com" 
+                className="text-gray-400 hover:text-red-400 transition-colors duration-300"
+                aria-label="Email"
+              >
                 <Mail className="w-6 h-6" />
               </a>
             </div>
@@ -42,21 +81,81 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((link) => (
-                <li key={link}>
-                  <button
-                    onClick={() => {
-                      const element = document.getElementById(link.toLowerCase());
-                      if (element) {
-                        element.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="text-gray-400 hover:text-white transition-colors duration-300"
-                  >
-                    {link}
-                  </button>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="#home"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('home');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('about');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#skills"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('skills');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('projects');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Projects
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  className="text-gray-400 hover:text-white transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById('contact');
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Contact
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -66,7 +165,7 @@ const Footer = () => {
             <div className="space-y-2 text-gray-400">
               <p>nickparmasau@gmail.com</p>
               <p>+254 706709332</p>
-              <p>Available Worldwide</p>
+              <p>Available Online</p>
             </div>
           </div>
         </div>
@@ -78,7 +177,7 @@ const Footer = () => {
             <span>by Nick Parmasau</span>
           </p>
           <p className="text-gray-500 text-sm mt-2">
-            © 2024 All rights reserved.
+            © 2025 All rights reserved.
           </p>
         </div>
       </div>
